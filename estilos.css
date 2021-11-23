@@ -6,7 +6,6 @@
 
 .main-header {
     text-align: center;
-    background-color: rgb(231, 214, 139);
     width: 100%;
 }
 
@@ -24,10 +23,10 @@
     color: white;
     padding: 8px;
     background: rgb(129, 0, 0);
-    margin: 8px;
+    margin: 3px;
     width: 25%;
     border-radius: 20px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 3px rgba(85, 85, 85, 0.3);
     box-sizing: border-box;
 }
 
@@ -37,8 +36,47 @@
 }
 
 .menu li a:hover {
-    background: rgb(216, 148, 85);
+    color: rgb(129, 0, 0);
+    background: white;
 }
+
+.mobile-nav a {
+    text-decoration: none;
+    text-align:center;
+    color: white;
+    padding: 8px;
+    background: rgb(129, 0, 0);
+    margin: 14px 3px;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 5px 3px rgba(85, 85, 85, 0.3);
+    box-sizing: border-box;
+	position: relative;
+	top: 0;
+    display: none;
+}
+
+.mobile-nav {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: rgb(231, 214, 139);
+    width: 15%;
+    height: 100vh;
+    display: none;
+}
+
+.mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 20%;
+    padding: 0;
+    text-align: left;
+}
+
+
 
 .cartas{
     background-color: rgb(216, 148, 85);
@@ -105,13 +143,26 @@
 }
 
 @media screen and (min-width : 80rem) {
+    .menu {
+        display: none;
+    }
     .contenedor-cartas{
         max-width: 120rem;
+        margin-left: 20%;
     }
     .cartas-item{
-        width: 25%;
+        width: 28%;
+        height: 17rem;
+        padding: 20px;
     }
     .solo-xbs{
+        display: inline-block;
+    }
+
+    .mobile-nav {
+        display: inline-block;
+    }
+    .mobile-nav a{
         display: inline-block;
     }
 }
